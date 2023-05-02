@@ -11,3 +11,4 @@ Creare un componente che mostri il numero totale di risultati ottenuti.
 
 ## Sviluppo
 - aggiunto h1 nell'Header
+- aggiunto main e container
