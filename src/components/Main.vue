@@ -18,7 +18,11 @@
 
 <template>
   <main>
-    <div class="container">
+    <h2 v-if="!store.load">Loading..</h2>
+    <div
+    class="container"
+    v-else
+    >
       <Card
         v-for="card in store.cardList"
         :key="card.id"
@@ -27,6 +31,7 @@
         :archetype="card.archetype"
       />
     </div>
+
   </main>
 </template>
 
@@ -44,6 +49,11 @@
       margin: 0 auto;
       padding: 30px;
       background-color: white;
+    }
+
+    h2 {
+      translate: 50% 50%;
+      color: black
     }
   }
 </style>
