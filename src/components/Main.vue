@@ -1,13 +1,17 @@
 <script>
+  import Card from './partials/Card.vue'
   export default {
-   name: 'Main' 
+   name: 'Main',
+   components: {
+    Card
+   } 
   }
 </script>
 
 <template>
   <main>
     <div class="container">
-
+      <Card/>
     </div>
   </main>
 </template>
