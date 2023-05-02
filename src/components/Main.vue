@@ -42,6 +42,7 @@
       flex-wrap: wrap;
       width: 90%;
       margin: 0 auto;
+      padding: 30px;
       background-color: white;
     }
   }

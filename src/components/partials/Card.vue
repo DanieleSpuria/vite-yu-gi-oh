@@ -25,11 +25,21 @@
   
   .col {
     width: calc(100% / 5);
-    padding: 20px;
+    padding: 10px;
     
     .card {
+      height: 480px;
       background-color: $primary-color;
       text-align: center;
+
+      h3,
+      span {
+        padding: 10px
+      }
+
+      h3 {
+        color: white
+      }
     }
   }
 </style>
