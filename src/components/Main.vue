@@ -1,10 +1,22 @@
 <script>
-  import Card from './partials/Card.vue'
+  import Card from './partials/Card.vue';
+  import {store} from '../assets/js/store';
   export default {
    name: 'Main',
+
    components: {
     Card
-   } 
+   }, 
+   
+   data() {
+    return {
+      store
+    }
+   },
+
+   mounted() {
+    console.log(this.store);
+   }
   }
 </script>
 

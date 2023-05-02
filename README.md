@@ -14,3 +14,4 @@ Creare un componente che mostri il numero totale di risultati ottenuti.
 - aggiunto main e container
 - aggiunta card
 - creata classe card e col
+- aggiunto store.js con url dell'api
