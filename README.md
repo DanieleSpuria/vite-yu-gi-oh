@@ -15,3 +15,4 @@ Creare un componente che mostri il numero totale di risultati ottenuti.
 - aggiunta card
 - creata classe card e col
 - aggiunto store.js con url dell'api
+- importato axios e aggiunta funzione getApi()
