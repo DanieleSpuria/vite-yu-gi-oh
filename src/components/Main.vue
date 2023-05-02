@@ -20,9 +20,11 @@
   <main>
     <div class="container">
       <Card
-        img=""        
-        name=""
-        archetype=""
+        v-for="card in store.cardList"
+        :key="card.id"
+        :img="card.card_images[0].image_url"        
+        :name="card.name"
+        :archetype="card.archetype"
       />
     </div>
   </main>
@@ -34,13 +36,13 @@
   main {
     padding: 50px 0;
     background-color: $primary-color;
-    height: 100vh;
 
     .container {
+      display: flex;
+      flex-wrap: wrap;
       width: 90%;
       margin: 0 auto;
       background-color: white;
-      height: 90%;
     }
   }
 </style>

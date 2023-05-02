@@ -24,10 +24,10 @@
   @use '../../assets/scss/general/var' as *;
   
   .col {
+    width: calc(100% / 5);
     padding: 20px;
     
     .card {
-      width: calc(100% / 5);
       background-color: $primary-color;
       text-align: center;
     }

@@ -21,8 +21,7 @@
       getApi() {
         axios.get(store.api)
         .then(result => {
-          store.cardList = result.data
-          console.log(store.cardList.data[0].name);
+          store.cardList = result.data.data
         })
       }
     },
