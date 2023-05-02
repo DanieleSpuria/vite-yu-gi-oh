@@ -18,3 +18,4 @@ Creare un componente che mostri il numero totale di risultati ottenuti.
 - importato axios e aggiunta funzione getApi()
 - aggiunta cardList nello store
 - stampate tutte le card tramte ciclo
+- aggiunto loading
