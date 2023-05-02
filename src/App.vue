@@ -19,10 +19,10 @@
 
     methods: {
       getApi() {
-        axios.get('this.store')
+        axios.get(store.api)
         .then(result => {
-          // const yuGi = result.data;
-          console.log(result.data);
+          store.cardList = result.data
+          console.log(store.cardList.data[0].name);
         })
       }
     },

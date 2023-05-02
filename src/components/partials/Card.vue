@@ -1,15 +1,21 @@
 <script>
   export default {
-    name: 'Card'
+    name: 'Card',
+
+    props: {
+      img: String,
+      name: String,
+      archetype: String
+    }
   } 
 </script>
 
 <template>
   <div class="col">
     <div class="card">
-      <img src="" alt="img">
-      <h3>NAME</h3>
-      <span>TYPE</span>
+      <img :src="img" :alt="name">
+      <h3>{{name}}</h3>
+      <span>{{ archetype }}</span>
     </div>
   </div>
 </template>

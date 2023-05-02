@@ -1,10 +1,17 @@
 <script>
   import Card from './partials/Card.vue';
+  import {store} from '../assets/js/store';
   export default {
    name: 'Main',
 
    components: {
     Card
+   },
+
+   data() {
+    return {
+      store
+    }
    }
   }
 </script>
@@ -12,7 +19,11 @@
 <template>
   <main>
     <div class="container">
-      <Card/>
+      <Card
+        img=""        
+        name=""
+        archetype=""
+      />
     </div>
   </main>
 </template>
