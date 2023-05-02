@@ -17,8 +17,8 @@
 </script>
 
 <template>
-  <main>
-    <h2 v-if="!store.load">Loading..</h2>
+  <main :class="{'vh' : !store.load}">
+    <h2 v-if="!store.load">Loading...</h2>
     <div
     class="container"
     v-else
@@ -45,6 +45,9 @@
   @use '../assets/scss/general/var' as *;
 
   main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 50px 0;
     background-color: $primary-color;
 
@@ -67,8 +70,11 @@
     }
 
     h2 {
-      translate: 50% 50%;
-      color: black
+      color: black;
     }
+  }
+
+  .vh {
+    height: 100vh;
   }
 </style>
