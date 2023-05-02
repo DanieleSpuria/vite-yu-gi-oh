@@ -23,13 +23,19 @@
     class="container"
     v-else
     >
-      <Card
-        v-for="card in store.cardList"
-        :key="card.id"
-        :img="card.card_images[0].image_url"        
-        :name="card.name"
-        :archetype="card.archetype"
-      />
+      <div class="found">
+        <span>Found {{ store.cardList.length }} cards</span>
+      </div>
+
+      <div class="row">
+        <Card
+          v-for="card in store.cardList"
+          :key="card.id"
+          :img="card.card_images[0].image_url"        
+          :name="card.name"
+          :archetype="card.archetype"
+        />
+      </div>
     </div>
 
   </main>
@@ -43,12 +49,21 @@
     background-color: $primary-color;
 
     .container {
-      display: flex;
-      flex-wrap: wrap;
       width: 90%;
       margin: 0 auto;
-      padding: 30px;
-      background-color: white;
+
+      .found {
+        padding: 20px;
+        color: white;
+        background-color: #212529;
+      }
+      
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px;
+        background-color: white;
+      }
     }
 
     h2 {

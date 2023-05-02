@@ -21,10 +21,8 @@
       getApi() {
         axios.get(store.api)
         .then(result => {
-          store.cardList = result.data.data
-          console.log(store.cardList);
+          store.cardList = result.data.data;
           store.load = true
-          console.log(store.load);
         })
 
       }
@@ -32,7 +30,6 @@
 
     mounted() {
       this.getApi()
-      console.log(store.load);
     }
   }
 </script>

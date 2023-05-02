@@ -19,3 +19,4 @@ Creare un componente che mostri il numero totale di risultati ottenuti.
 - aggiunta cardList nello store
 - stampate tutte le card tramte ciclo
 - aggiunto loading
+- aggiunto numero totale di card trovate
