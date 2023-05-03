@@ -47,13 +47,14 @@
       },
 
       reset() {
-        store.typeValue = null
+        store.typeValue = null;
+        store.offsetCard = 0;
         this.getApi()
       }
     },
 
     mounted() {
-      this.getApi();
+      this.getApi()
     }
   }
 </script>
