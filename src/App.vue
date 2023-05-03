@@ -29,7 +29,14 @@
         })
         .then(result => {
           store.cardList = result.data.data;
-          store.load = true
+          store.load = true;
+        }),
+
+        axios.get(store.api)
+        .then(result => {
+          result.data.data.forEach(card => {
+            if (!store.typeList.includes(card.type)) store.typeList.push(card.type);
+          })
         })
 
       }

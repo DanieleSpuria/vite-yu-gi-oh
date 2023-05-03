@@ -6,5 +6,6 @@ export const store = reactive ({
   load: false,
   counter: 0,
   numCard: 10,
-  offsetCard: 0
+  offsetCard: 0,
+  typeList: []
 });
