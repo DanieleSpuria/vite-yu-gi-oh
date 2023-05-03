@@ -24,7 +24,8 @@
         axios.get(store.api, {
           params: {
             num: store.numCard,
-            offset: store.offsetCard
+            offset: store.offsetCard,
+            type: store.typeValue
           }
         })
         .then(result => {
@@ -38,18 +39,23 @@
             if (!store.typeList.includes(card.type)) store.typeList.push(card.type);
           })
         })
+      },
+
+      reset() {
+        store.typeValue = null
+        this.getApi()
       }
     },
 
     mounted() {
-      this.getApi()
+      this.getApi();
     }
   }
 </script>
 
 <template>
   <Header/>
-  <Main/>
+  <Main @search="getApi()" @reset="reset()"/>
   <Footer @nextPrevOffset="getApi()"/>
 </template>
 

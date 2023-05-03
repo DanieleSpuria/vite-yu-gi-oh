@@ -35,7 +35,8 @@
           >{{ type }}</option>
         </select>
 
-        <button>Search</button>
+        <button @click="$emit ('search')">Search</button>
+        <button @click="$emit ('reset')">Reset</button>
       </div>
 
       <div class="found">
