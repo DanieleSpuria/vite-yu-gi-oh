@@ -4,5 +4,7 @@ export const store = reactive ({
   api: 'https://db.ygoprodeck.com/api/v7/cardinfo.php',
   cardList: [],
   load: false,
-  counter: 0
+  counter: 0,
+  numCard: 10,
+  offsetCard: 0
 });

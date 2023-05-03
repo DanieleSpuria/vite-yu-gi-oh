@@ -1,6 +1,7 @@
 <script>
   import Header from './components/Header.vue';
   import Main from './components/Main.vue';
+  import Footer from './components/Footer.vue';
   import {store} from './assets/js/store';
   import axios from 'axios';
   export default {
@@ -8,7 +9,8 @@
 
     components: {
       Header,
-      Main
+      Main,
+      Footer
     }, 
    
     data() {
@@ -19,7 +21,12 @@
 
     methods: {
       getApi() {
-        axios.get(store.api)
+        axios.get(store.api, {
+          params: {
+            num: store.numCard,
+            offset: store.offsetCard
+          }
+        })
         .then(result => {
           store.cardList = result.data.data;
           store.load = true
@@ -37,6 +44,7 @@
 <template>
   <Header/>
   <Main/>
+  <Footer @nextPrevOffset="getApi()"/>
 </template>
 
 <style lang="scss">

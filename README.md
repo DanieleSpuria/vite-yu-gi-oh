@@ -20,3 +20,4 @@ Creare un componente che mostri il numero totale di risultati ottenuti.
 - stampate tutte le card tramte ciclo
 - aggiunto loading
 - aggiunto numero totale di card trovate
+- aggiunta impaginazione e bottoni per la navigazione
