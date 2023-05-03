@@ -39,7 +39,7 @@
           :key="card.id"
           :img="card.card_images[0].image_url"        
           :name="card.name"
-          :archetype="card.archetype"
+          :type="card.type"
         />
       </div>
     </div>

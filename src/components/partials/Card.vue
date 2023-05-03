@@ -5,7 +5,7 @@
     props: {
       img: String,
       name: String,
-      archetype: String
+      type: String
     }
   } 
 </script>
@@ -15,7 +15,7 @@
     <div class="card">
       <img :src="img" :alt="name">
       <h3>{{name}}</h3>
-      <span>{{ archetype }}</span>
+      <span>{{ type }}</span>
     </div>
   </div>
 </template>
