@@ -21,7 +21,7 @@
 <template>
   <footer>
     <button @click="nextPrev(-store.numCard)" v-if="store.offsetCard">PREV</button>
-    <button @click="nextPrev(store.numCard)">NEXT</button>
+    <button @click="nextPrev(store.numCard)" v-if="!(store.cardList.length < 10)">NEXT</button>
   </footer>
 </template>
 
