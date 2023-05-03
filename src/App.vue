@@ -41,6 +41,11 @@
         })
       },
 
+      search() {
+        store.offsetCard = 0;
+        this.getApi()
+      },
+
       reset() {
         store.typeValue = null
         this.getApi()
@@ -55,7 +60,7 @@
 
 <template>
   <Header/>
-  <Main @search="getApi()" @reset="reset()"/>
+  <Main @search="search()" @reset="reset()"/>
   <Footer @nextPrevOffset="getApi()"/>
 </template>
 
