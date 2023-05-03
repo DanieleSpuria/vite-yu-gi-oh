@@ -21,7 +21,7 @@
 </template>
 
 <style lang="scss" scoped>
-  @use '../../assets/scss/general/var' as *;
+  @use '../../assets/scss/partials/var' as *;
   
   .col {
     width: calc(100% / 5);

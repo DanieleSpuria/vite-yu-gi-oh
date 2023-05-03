@@ -1,11 +1,13 @@
 <script>
   import Card from './partials/Card.vue';
+  import Select from './partials/Select.vue';
   import {store} from '../assets/js/store';
   export default {
    name: 'Main',
 
    components: {
-    Card
+    Card, 
+    Select
    },
 
    data() {
@@ -23,6 +25,10 @@
     class="container"
     v-else
     >
+      <div class="select">
+        <Select/>
+      </div>
+
       <div class="found">
         <span>Found {{ store.cardList.length }} cards</span>
       </div>
@@ -42,18 +48,22 @@
 </template>
 
 <style lang="scss" scoped>
-  @use '../assets/scss/general/var' as *;
+  @use '../assets/scss/partials/var' as *;
+  @use '../assets/scss/partials/mixin' as *;
 
   main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 0;
+    @include flex;
+    padding-bottom: 50px;
     background-color: $primary-color;
 
     .container {
       width: 90%;
       margin: 0 auto;
+
+      .select {
+        @include flex;
+        padding: 20px;
+      }
 
       .found {
         padding: 20px;

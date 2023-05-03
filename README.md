@@ -24,3 +24,4 @@ Creare un componente che mostri il numero totale di risultati ottenuti.
 - aggiunto loading
 - aggiunto numero totale di card trovate
 - aggiunta impaginazione e bottoni per la navigazione
+- aggiunto componente select e inserito nel main

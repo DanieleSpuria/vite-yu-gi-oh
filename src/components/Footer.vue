@@ -26,9 +26,10 @@
 </template>
 
 <style lang="scss" scoped>
+  @use '../assets/scss/partials/mixin' as *;
+
   footer {
-    display: flex;
-    justify-content: center;
+    @include flex;
     padding: 20px;
 
     button {
