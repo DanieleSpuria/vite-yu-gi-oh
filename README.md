@@ -27,3 +27,4 @@ Creare un componente che mostri il numero totale di risultati ottenuti.
 - aggiunto componente select e inserito nel main
 - aggiunto array che viene riempito dai vari type dopo una chiamata parallela
 - aggiunte opzioni alla select prendendole da typeList
+- aggiunto bottone per la ricerca e proprietà nello store che memorizza il valore selezionato nella select

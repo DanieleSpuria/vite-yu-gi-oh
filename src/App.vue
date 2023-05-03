@@ -38,7 +38,6 @@
             if (!store.typeList.includes(card.type)) store.typeList.push(card.type);
           })
         })
-
       }
     },
 

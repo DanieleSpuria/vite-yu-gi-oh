@@ -32,10 +32,6 @@
     @include flex;
     padding: 20px;
 
-    button {
-      margin: 0 10px;
-      padding: 2px 5px;
-      background-color: lightblue;
-    }
+    @include button;
   }
 </style>

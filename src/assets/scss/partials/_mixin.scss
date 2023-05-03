@@ -3,3 +3,11 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin button {
+  button {
+    margin: 0 10px;
+    padding: 2px 5px;
+    background-color: lightblue;
+  }
+}

@@ -1,13 +1,13 @@
 <script>
   import Card from './partials/Card.vue';
-  import Select from './partials/Select.vue';
+  // import Select from './partials/Select.vue';
   import {store} from '../assets/js/store';
   export default {
    name: 'Main',
 
    components: {
     Card, 
-    Select
+    // Select
    },
 
    data() {
@@ -26,7 +26,16 @@
     v-else
     >
       <div class="select">
-        <Select/>
+        <select v-model="store.typeValue">
+          <option value="">Select type</option>
+          <option
+            v-for="(type, index) of store.typeList"
+            :key="index"
+            :value="type"
+          >{{ type }}</option>
+        </select>
+
+        <button>Search</button>
       </div>
 
       <div class="found">
@@ -63,6 +72,13 @@
       .select {
         @include flex;
         padding: 20px;
+
+        select {
+          padding: 2px 5px;
+          background-color: lightblue;
+        }
+
+        @include button;
       }
 
       .found {
